@@ -6,15 +6,16 @@ import {
 } from './Statistic.styled';
 
 export const Statistic = ({
-  dataState,
+  feedbackData,
   countTotalFeedback,
   countPositiveFeedbackPercentage,
 }) => {
   return (
     <StatisticList>
-      {dataState.map(item => (
-        <StatisticListItem key={item[0]}>
-          {item[0]}: <StatisticCount>{item[1]}</StatisticCount>
+      {feedbackData.map(feedbackDataItem => (
+        <StatisticListItem key={feedbackDataItem[0]}>
+          {feedbackDataItem[0]}:{' '}
+          <StatisticCount>{feedbackDataItem[1]}</StatisticCount>
         </StatisticListItem>
       ))}
 
